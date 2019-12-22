@@ -1,0 +1,24 @@
+putty
+host 165.227.64.227
+
+port  22
+
+connection type SSH
+
+u=root
+ p=Test123$$
+
+      
+cd /var/log/tomcat7
+   
+LIst command=   ll
+      
+editor=nano openid.log
+
+
+DB
+host : 165.227.64.227
+
+username : root
+
+password : Peer@2017
