@@ -1,0 +1,107 @@
+Throws keyword:
+
+If a method is capable of throwing an exception that it could not handle, then it should specify that exception using throws keyword. It helps the callers of that method in handling that exception.
+
+What is the meaning of “IS-A” and “HAS-A” relationship?
+
+“IS-A” relationship implies inheritance. A sub class object is said to have “IS-A” relationship with the super class or interface. If class A extends B then A “IS-A” B. It is transitive, that is, if class A extends B and class B extends C then A “IS-A” C. The “instanceof” operator in java determines the “IS-A” relationship.
+
+When a class A has a member reference variable of type B then A “HAS-A” B. It is also known as Aggregation.
+
+
+Collection
+                                extends                             implements
+Collection(interface)< ======= list(interface)<===========arraylist(class)
+
+* Disadvantage of using collection is user can't insert value in between and we can't sort it because it doesn't work with     indexes.
+
+* list maintaining the sequence.
+ 
+Vector
+
+1) vector wasting more memory and arraylist is not.
+
+
+LinkedList vs ArrayList
+
+1) arraylist is slow when inserting data in between
+
+2) linkedlist is slow when fetching data because it doesn't work with indexes.
+
+
+HashTable vs HashMap
+
+1) Hashmap is fast , hashtable is slow.
+2) Hashmap works with single thread and hashtable works with multiple.
+
+Map.Entry<String,String>
+
+* entry is a interface inside map interface
+
+* where map has method called entrySet() return set of entry means key value pair.
+
+HashMap Internal Working:
+
+1) first check key== null if yes then place the value at 0th index
+
+2) if key not null then calculate hash code 
+
+3) check the capacity if enough then  ok otherwise increase it. capacity=number(buckets)*loadfactor(0.75)
+
+4)calculate the index for entry.
+
+6) place the object at index if any other key is not present 
+ 
+7) if present check via hashCode() and equals() method that if both the keys are same.
+
+8) if keys are same replace old value with current.
+
+9)Otherwise connect this node object to the previous node object via linked list and both are stored at same index .
+
+
+Exception Handling:
+
+*  if your method throw checked exception then calling method needs to handle it.
+
+*   if your method throw unchecked exception then calling method don't need to do anything.
+
+
+Note:
+
+1. whenever you call subclass constructor it will automatically call super class default constructor.in case of parameterize you need to use super keyword.
+
+
+java 8 Features:
+
+1.Functional Interface: 
+
+* inteface that has only one abstract method is called as functional interface.
+
+* it is also called as sam(single abstract method) ineterface.
+
+
+2. optional class
+
+* Java introduced a new class Optional in Java 8. It is a public final class which is used to deal with NullPointerException in Java application .We must import java.util package to use this class. It provides methods to check the presence of value for particular variable.
+
+3. String joiner
+
+* it is mainly used to seperate character with specific delemiter.
+
+* it has add method in which we can add multiple string.
+
+* it has merge method to merge two string joiners.
+
+
+
+3. collector :
+
+* Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria, etc.
+
+* it has follwing method counting , tolist, toSet etc.
+
+
+
+
+
+

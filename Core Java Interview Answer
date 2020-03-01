@@ -1,0 +1,12 @@
+1. What is casting? What is implicit casting?  What is explicit casting?
+
+byte -> short -> int -> long -> float -> double (assiging value from lower to upper) Implicit
+
+byte <- short <- int <- long <- float <- double (assiging value from lower to upper) Explicit
+
+
+
+2.Why should you be careful about String concatenation(+) operator in loops?
+
+The reason is the String immutable. Instead of modifying a string, It creates a new one. String pool stores all String values until garbage collectors flush it.and it takes more memory. Think about two strings are there as Hello and how are you. If we consider the String pool, It has two String. 
+
