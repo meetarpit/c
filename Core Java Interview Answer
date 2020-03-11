@@ -25,8 +25,21 @@ Assume that you have made Date variable volatile. All the threads, which access 
 1. Assertion is mainly used for testing of correctness of your assumption that have been made for developement
 2. it can be used by assert keyword.
 
-4. when and how garbage collection performed?
+4. IIB(Instance Intialzation Blocks):
+a) It is mainly used to intialze variables it is placed just before the constructor and called every time when class intializes.
+
+5. when and how garbage collection performed?
 
 1. it uses two methodds.
 a) System.gc().   
 b) Runtime.getRuntime.gc()
+
+
+6. String tokenzer:
+it maily used to break the string into tokens.
+
+7. Are the values of static variables stored when an object is serialized?
+When we de-serialized an object only, instance variables are saved and will have same values after the process.
+
+Transient variables − The values of the transient variables are never considered (they are excluded from the serialization process). i.e. When we declare a variable transient, after de-serialization its value will always be null, false, or, zero (default value).
+Static variables − The values of static variables will not be preserved during the de-serialization process. In-fact static variables are also not serialized but since these belongs to the class. After de-serialization they get their current values from the class.
