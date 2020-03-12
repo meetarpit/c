@@ -47,3 +47,15 @@ When we declare a variable transient, after de-serialization its value will alwa
 Static variables − The values of static variables will not be preserved during the de-serialization process. 
 In-fact static variables are also not serialized but since these belongs to the class. 
 After de-serialization they get their current values from the class.
+
+
+
+ExecuterService:
+
+it's a new interface which is mainly used to execute thread it has different method.
+ExecuteService ex = Executor.newSingleThreadExecutor();
+
+it  has future that is used to get thread return value, it reurns null if task finished.
+
+it has callable which is used to get thread result.
+
