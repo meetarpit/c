@@ -85,3 +85,5 @@ Garbage collection does not guarantee that a program will not run out of memory.
 It is possible for programs to use up memory resources faster than they are garbage collected. 
 It is also possible for programs to create objects that are not subject to garbage collection.
 
+Load Factor:
+The load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased.
