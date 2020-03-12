@@ -77,4 +77,11 @@ it is usually represented as 8 bits. UTF-8 represents characters using 8, 16, an
 UTF-16 uses 16-bit and larger bit patterns.
 
 Transient Variable
-A transient variable is a variable that may not be serialized during Serialization and which is initialized by its default value during de-serialization,
+A transient variable is a variable that may not be serialized during Serialization 
+and which is initialized by its default value during de-serialization,
+
+Does garbage collection guarantee that a program will not run out of memory?
+Garbage collection does not guarantee that a program will not run out of memory. 
+It is possible for programs to use up memory resources faster than they are garbage collected. 
+It is also possible for programs to create objects that are not subject to garbage collection.
+
