@@ -75,3 +75,6 @@ How many bits are used to represent Unicode, ASCII, UTF-16, and UTF-8 characters
 Unicode requires 16 bits and ASCII require 7 bits. Although the ASCII character set uses only 7 bits,
 it is usually represented as 8 bits. UTF-8 represents characters using 8, 16, and 18 bit patterns.
 UTF-16 uses 16-bit and larger bit patterns.
+
+Transient Variable
+A transient variable is a variable that may not be serialized during Serialization and which is initialized by its default value during de-serialization,
