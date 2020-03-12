@@ -25,6 +25,8 @@ Assume that you have made Date variable volatile. All the threads, which access 
 1. Assertion is mainly used for testing of correctness of your assumption that have been made for developement
 2. it can be used by assert keyword.
 
+
+
 4. IIB(Instance Intialzation Blocks):
 a) It is mainly used to intialze variables it is placed just before the constructor and called every time when class intializes.
 
@@ -59,3 +61,14 @@ it  has future that is used to get thread return value, it reurns null if task f
 
 it has callable which is used to get thread result.
 
+
+Set Types:
+
+1. HashSet=> unordered unsorted.
+2.Treeset=>sorted ,unorderd.
+3.LinkedHashSet=>ordered unsorted.
+
+How many bits are used to represent Unicode, ASCII, UTF-16, and UTF-8 characters?
+Unicode requires 16 bits and ASCII require 7 bits. Although the ASCII character set uses only 7 bits,
+it is usually represented as 8 bits. UTF-8 represents characters using 8, 16, and 18 bit patterns.
+UTF-16 uses 16-bit and larger bit patterns.
