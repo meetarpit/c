@@ -87,3 +87,13 @@ It is also possible for programs to create objects that are not subject to garba
 
 Load Factor:
 The load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased.
+
+
+
+There are three types of design pattern
+1. Creational design pattern deal with the creation of objects
+
+2. Structural designing pattern deal with the composition of object what are relationship between them
+
+3 behavioral design patter deal with the behavior of an object like how object communicate with each other
+
