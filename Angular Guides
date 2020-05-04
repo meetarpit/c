@@ -11,3 +11,7 @@ The JavaScript parts of Bootstrap are dependent on jQuery. So you need the jQuer
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/bootstrap/dist/js/bootstrap.min.js"
 ]
+
+imports:
+
+import { FormsModule }   from '@angular/forms';
