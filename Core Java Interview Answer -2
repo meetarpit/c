@@ -1,0 +1,227 @@
+1. What is casting? What is implicit casting?  What is explicit casting?
+
+byte -> short -> int -> long -> float -> double (assiging value from lower to upper) Implicit
+
+byte <- short <- int <- long <- float <- double (assiging value from lower to upper) Explicit
+
+
+
+2.Why should you be careful about String concatenation(+) operator in loops?
+
+The reason is the String immutable. Instead of modifying a string, It creates a new one. String pool stores all String values until garbage collectors flush it.and it takes more memory. Think about two strings are there as Hello and how are you. If we consider the String pool, It has two String. 
+
+3. difference b/w printf and print..
+
+printf returns string object and print formated output of string.
+
+Synchhronized vs volartile:
+
+
+synchronized is method level/block level access restriction modifier. It will make sure that one thread owns the lock for critical section. Only the thread,which own a lock can enter synchronized block. If other threads are trying to access this critical section, they have to wait till current owner releases the lock.
+volatile is variable access modifier which forces all threads to get latest value of the variable from main memory. No locking is required to access volatile variables. All threads can access volatile variable value at same time.
+
+A good example to use volatile variable : Date variable.
+
+Assume that you have made Date variable volatile. All the threads, which access this variable always get latest data from main memory so that all threads show real (actual) Date value. You don't need different threads showing different time for same variable. All threads should show right Date value.
+
+3. what is Assertions?
+
+1. Assertion is mainly used for testing of correctness of your assumption that have been made for developement
+2. it can be used by assert keyword.
+
+When is the ArrayStoreException thrown?
+When copying elements between different arrays, if the source or destination arguments are not arrays or 
+their types are not compatible, an ArrayStoreException will be thrown.
+
+
+4. IIB(Instance Intialzation Blocks):
+a) It is mainly used to intialze variables it is placed just before the constructor and called every time when class intializes.
+
+5. when and how garbage collection performed?
+
+1. it uses two methodds.
+a) System.gc().   
+b) Runtime.getRuntime.gc()
+
+
+6. String tokenzer:
+it maily used to break the string into tokens.
+
+7. Are the values of static variables stored when an object is serialized?
+When we de-serialized an object only, instance variables are saved and will have same values after the process.
+
+Transient variables − The values of the transient variables are never 
+considered (they are excluded from the serialization process). i.e.
+When we declare a variable transient, after de-serialization its value will always be null, false, or, zero (default value).
+Static variables − The values of static variables will not be preserved during the de-serialization process. 
+In-fact static variables are also not serialized but since these belongs to the class. 
+After de-serialization they get their current values from the class.
+
+
+Transient Variable
+A transient variable is a variable that may not be serialized during Serialization 
+and which is initialized by its default value during de-serialization,
+
+Does garbage collection guarantee that a program will not run out of memory?
+Garbage collection does not guarantee that a program will not run out of memory. 
+It is possible for programs to use up memory resources faster than they are garbage collected. 
+It is also possible for programs to create objects that are not subject to garbage collection.
+
+Load Factor:
+The load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased.
+
+Copy Constructor: It accepts the same class as paramenter.
+
+Static Inner class can't use instance variable of outerclass.
+
+Assertion : is manily used to check the assuption made about particular method.
+
+HashSet : unordered,unsorted.
+
+LinkedHashSet : ordered,unsorted
+
+TreeSet :unordered sorted
+
+HashMap : unordered,unsorted.
+
+LinkedHashMap : ordered,unsorted
+
+TreeMap :unordered sorted
+
+Priority: In java scheduler requested to alot more cpu to a thread by assign them to a priority.by default it is 5 (1-10)
+
+ExecuterService: It mainly used to perform task asynchronously in background.
+
+1. Future: It mainly used to get thread return value if it shows null then it indicates task is finished.
+
+2. Callable: It mainly used to get thread result.
+
+Yield : it is a static method of thread class. it manily used to take thread into Runnable state from running state.
+
+*if a method throw checked execption then calling method needs to declare and handle that exception.
+
+
+
+
+
+There are three types of design pattern
+1. Creational design pattern deal with the creation of objects
+
+2. Structural designing pattern deal with the composition of object what are relationship between them
+
+3 behavioral design patter deal with the behavior of an object like how object communicate with each other
+
+
+
+Under creational design pattern we have 4 types
+
+1. Prototype - A fully initalize instance to be copied.
+
+2. Builder -  Separate object creation from its represtation.
+
+3. Singleton - Provide per instance one jvm ,difficult to unit test.
+
+4. Factory - To create family of objects.
+
+Under structrual design pattern we have 5 types
+
+1. Proxy - An object representing another object like credit card is proxy for bank.
+
+2. Decorator - Adding resposibilty to object dynamically like discount on orders.
+
+3. Facade - A single class represents the entire subsystem like event manager and online book order.
+
+4. Adapter - Matching the interface of different classes like communication b/w restApi and java.
+
+5. Flyweight - A fine grained instance created for efficient sharing. JDBC connection pool we don't need to create connection any time.connection pool matches the connection and fired the query once it compltes connection will be close automatically.
+
+Under behavioral design pattern we have 10 type:
+
+1. ChainOfReponsibilty - passing a request b/w chain of objects.
+
+2. Itreator - loop arround collection object and ex is next and privious button.
+
+3. State - Alter the object behviour changes the object state.
+
+4. Strategy - Encapsulate an algo inside class.
+
+5. Obserever - A way of notifyning a change to number of classes.
+
+6. Visitor - Defines a new operation to a class without chaning the code ex is . FRAMEWORKS. we can let other developer to extend it but don't allow them to change the code underneath.
+
+7. Template - Handling high level implementation and leaving low leve implementation to a subclass , then subclass extended that funationality and discover low level implemenetation and the ex is  AbstractController and that handle the request and preaper response.
+
+8. Command - passing a command request as an object for the ex. request object.
+
+9. Momento - Capturing and restoring object internal state. ex is. serlizable
+
+10. Mediator - Provide simplfied communtication b/w classes. ex is "air traffic controller" 
+
+
+Fail fast iterator - It's a type of iterator in which if any modification is done during traversing then it will throw concurrent   modification execption.
+
+Set Vs Map: 
+
+1. interface 
+2. dummy value
+3. duplicates.
+4. single null value
+5. iteration
+
+
+why we need marker interface?
+
+Marker interface means empty inteface.They are used because we are telling to JVM that that class have special behaviour.
+eg. by serilizable we are telling to JVM class is Seriliazable.
+by Cloneable we are telling to JVM class is Cloneable.
+
+
+MultiThreading Drawbacks:
+
+1. complex in debugging and testing.
+2. increased complexity.
+3. unpredicatble result.
+
+Busy Spining:
+it's useful when checking on states of threads.
+service.shutDown();
+while (!service.isTerminated());
+
+Why thread communication methods wait(), notify() and notifyAll() are in Object class?
+they are used for monitor and sharing and object class is the best place to make them avalible for each class.
+
+Shallow cloning:
+
+when two reference point to single object.
+
+Deep Cloning:
+two reference point to two object.
+
+cloning:
+combination of shallow and deep cloning.
+
+Why Object clone() method available only to classes that implement Cloneable interface?
+The clone method in the Object class is protected to prevent a client class from calling it - Only subclasses can call or override clone
+
+What will be the problem if you don't override hashcode() method?
+then default object class override hashcode method and it will give different hash value for different object.
+
+What happens On HashMap in Java if the size of the HashMap exceeds a given threshold defined by load factor ?
+Whenever HashMap reaches its threshold, rehashing takes place. Rehashing is a process where new HashMap object with new capacity is created and all old elements (key-value pairs) are placed into new object after recalculating their hashcode
+
+ReadWriteLock is an advanced thread lock mechanism. It allows multiple threads to read a certain resource, but only one to write it, at a time.
+
+ConcurrentHashmap:
+
+it is same as hashmap but it is thread safe.
+it provides locking mechanism on separate sagments.
+it doesn't allow null key and null values.
+
+
+Synchronized HashMap:
+
+1. it provides synchronization at object level.
+2. it needs to acquire lock for read and write.
+3. it gives slow performance.
+
+
