@@ -15,3 +15,6 @@ The JavaScript parts of Bootstrap are dependent on jQuery. So you need the jQuer
 imports:
 
 import { FormsModule }   from '@angular/forms';
+
+{ path: 'employees',canActivate:[AuthGuard], loadChildren: () => import('src/app/employee/employee.module').then(m => m.EmployeeModule) },
+
