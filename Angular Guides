@@ -18,3 +18,23 @@ import { FormsModule }   from '@angular/forms';
 
 { path: 'employees',canActivate:[AuthGuard], loadChildren: () => import('src/app/employee/employee.module').then(m => m.EmployeeModule) },
 
+
+NGRX:
+
+npm i @ngrx/store @ngrx/effects @ngrx/entity @ngrx/store-devtools @ngrx/router-store
+
+npm install @ngrx/store-devtools --save
+
+ng add @ngrx/store-devtools@latest
+
+npm install @ngrx/schematics --save-dev
+
+ng add @ngrx/schematics@latest
+
+ng g store State --root --m app.module.ts
+
+ng g reducer employee --reducers reducers/index.ts
+
+ng g selector employee
+
+ng g effect employee --root -m app.module.ts
