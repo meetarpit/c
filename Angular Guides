@@ -14,6 +14,7 @@ The JavaScript parts of Bootstrap are dependent on jQuery. So you need the jQuer
 
 imports:
 import { catchError, exhaustMap, map } from "rxjs/operators";
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 import { FormsModule }   from '@angular/forms';
