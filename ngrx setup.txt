@@ -1,0 +1,21 @@
+Create store:
+ng add @ngrx/store@latest --minimal false
+
+Create store devTools:
+ng add @ngrx/store-devtools
+
+Create effects:
+npm install @ngrx/effects
+
+Create routerStore: 
+npm install @ngrx/router-store
+
+ConcatMap : it will concat all the call. 
+EX: suppose you are requesting one call the you made second call before getting response.
+from server.so it will concat all calls.
+
+SwitchMap : It will remove prevoius calls only sending current calls.
+
+ExhaustMap : It will exhaust all the calls that you made after first call.
+
+MergeMap : it will merge all the calls before getting respons.
