@@ -1,6 +1,6 @@
 execute
 
-npm install bootstrap@4 jquery --save
+npm install bootstrap@latest jquery@latest --save
 
 The JavaScript parts of Bootstrap are dependent on jQuery. So you need the jQuery JavaScript library file too.
 
